@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
+
+:root {
+    --blue: #0188df;
+    --black: #354046;
+}
+
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    outline: none !important;
+    text-decoration: none !important;
+    font-weight: 400;
+    transition: all 0.2s linear;
+}
+
+*::selection {
+    background: var(--black);
+    color: #fff;
+}
+.container{
+    display: flex;
+flex-direction:column ;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+section {
+    overflow: hidden;
+}
+
+.button {
+    height: 3.5rem;
+    width: 15rem;
+    background: var(--blue);
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--black);
+    z-index: -1;
+    transition: 0.2s linear;
+}
+
+.button:hover::before {
+    top: 0%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    padding: 1rem;
+    padding-top: 8rem;
+    color: var(--black);
+}
+
+.heading span {
+    color: var(--blue);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 1rem;
+    z-index: 1000;
+    background: #fff;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: var(--black);
+}
+
+header a:hover {
+    color: var(--blue);
+}
+
+header .container .logo {
+    font-size: 3rem;
+}
+
+header .container .logo span {
+    color: var(--blue);
+}
+
+.header-active {
+    background: #fff;
+    box-shadow: 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+    padding: 0.8rem 1rem;
+}
+
+header .nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .nav ul li {
+    margin: 0 1rem;
+}
+
+header .nav ul li a {
+    font-size: 2rem;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: var(--blue);
+    cursor: pointer;
+    display: none;
+}
+
+header .fa-times {
+    transform: rotate(180deg);
+}
+
+.home .container .image {
+    padding-top: 8rem;
+}
+
+.home .content h1 {
+    font-size: 4rem;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.home .content h1 span {
+    color: var(--blue);
+}
+
+.home .content h3 {
+    font-size: 3rem;
+}
+
+/**learn more**/
+.learnmore {
+    background: #fff;
+}
+
+.learnmore .heading {
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+.learnmore ul li {
+    text-align: justify;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+.learnmore p {
+    text-align: justify;
+    font-size: 1.5rem;
+}
+
+/*facilitysection*/
+
+.facility {
+    min-height: 100vh;
+}
+
+.facility .box-container {
+    display: flex;
+    justify-content: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    padding-left: 5.8rem;
+}
+
+.facility .box-container .box {
+    height: 20rem;
+    width: 30rem;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.facility .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box:hover img {
+    transform: scale(1.2);
+}
+
+/*Appointment */
+.appoint {
+    background: #fff;
+}
+
+.appoint .heading {
+    color: var(--black);
+}
+
+.appoint form {
+    text-align: center;
+}
+
+.appoint form .inputbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.appoint form .inputbox input,
+select {
+    height: 4rem;
+    width: 100%;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+.appoint form .inputbox input,
+select,
+textarea {
+    border-radius: 0.5rem;
+    border: 1.2px solid var(--black);
+}
+
+.appoint form textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+    font-size: 1.7rem;
+    resize: none;
+}
+
+.appoint form input[type="submit"] {
+    width: 20rem;
+}
+
+.appoint form input[type="submit"]:hover {
+    background: var(--black);
+}
+
+.appoint .box-container {
+    display: flex;
+    justify-content: flex;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+    padding-left: 5.8rem;
+}
+
+.appoint .box-container .box {
+    height: 20rem;
+    width: 30rem;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.appoint .box-container .box h3 span {
+    padding: 2rem;
+    position: absolute;
+    text-align: center;
+    color: var(--blue);
+}
+
+.appoint.box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.appoint .box-container .box:hover img {
+    transform: scale(1.2);
+}
+
+/*ORDER*/
+.shop {
+    background: var(--black);
+}
+
+.shop .heading {
+    color: #fff;
+}
+
+.shop form {
+    text-align: center;
+}
+
+.shop form .inputbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shop form .inputbox input {
+    height: 4rem;
+    width: 49%;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+}
+
+.shop form textarea {
+    width: 100%;
+    height: 10rem;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    resize: none;
+}
+
+.shop form input[type="file"] {
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    resize: none;
+    color: var(--blue);
+    cursor: pointer;
+    position: relative;
+    left: 2rem;
+}
+
+.shop form p {
+    font-size: 2rem;
+    color: #fff;
+    padding-right: 1.5rem;
+}
+
+.shop form input[type="submit"] {
+    width: 20rem;
+    margin: 1rem;
+}
+
+.shop form input[type="submit"]:hover {
+    background: #fff;
+    color: var(--blue);
+}
+
+/**CONTACT Us**/
+.contact {
+    background: #fff;
+    padding-top: 10rem;
+}
+
+.contact .row .col-md-5 {
+    text-align: left;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact h2 span {
+    color: var(--blue);
+}
+
+.contact p {
+    font-size: 2rem;
+    position: relative;
+    margin-right: 10rem;
+    height: 200px;
+    top: auto !important;
+    overflow-y: hidden !important;
+    display: inline-block;
+    left: 10rem !important;
+    width: 90%;
+    height: auto;
+    margin-top: -7px;
+}
+
+.contact h3 {
+    font-size: 2.5rem;
+    position: relative;
+    color: var(--black);
+    display: block;
+    left: 7rem !important;
+    text-transform: capitalize;
+    line-height: 1.4em;
+    margin-left: 20px;
+}
+
+/**footer**/
+.footer {
+    background: var(--black);
+    padding-top: 9rem;
+}
+
+.footer p {
+    font-size: 1.5rem;
+    color: #eee;
+    padding: 1.5rem 0;
+    text-align: justify;
+}
+
+.footer .col-md-4:nth-child(1) a {
+    font-size: 3rem;
+}
+
+.footer .col-md-4:nth-child(1) a span {
+    color: var(--blue);
+}
+
+.footer a {
+    font-size: 1.8rem;
+    color: #ccc;
+    display: block;
+    text-transform: capitalize;
+}
+
+.footer h3 {
+    color: #fff;
+    font-size: 3rem;
+    text-transform: capitalize;
+}
+
+.footer a:hover {
+    color: var(--blue);
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 55%;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .nav {
+        position: fixed;
+        top: -100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 100vh rgba(0, 0, 0, 0.3);
+        border-radius: 0.5em;
+        border: 0.3rem solid var(--blue) !important;
+        background: #fff;
+        width: 95%;
+        opacity: 0;
+    }
+
+    header .nav ul {
+        width: 100%;
+        flex-flow: column;
+        padding: 2rem 0;
+    }
+
+    header .nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    header .nav ul li a {
+        font-size: 3.5rem;
+        display: block;
+    }
+
+    header .nav-toggle {
+        top: 50%;
+        opacity: 1;
+    }
+
+    .facility .box-container {
+        align-items: center;
+        padding-left: 10rem;
+    }
+
+    .appoint .box-container .box {
+        height: 100%;
+        padding-right: 2rem;
+        margin: 2rem;
+    }
+
+    .appoint .box-container .box h3 span {
+        padding: 0.5rem;
+    }
+
+    .contact form .inputbox input,
+    select {
+        width: 100%;
+    }
+
+    .contact form input[type="submit"] {
+        width: 20rem;
+    }
+
+    .shop form .inputbox input {
+        width: 100%;
+    }
+
+    .shop form input[type="file"] {
+        width: 25rem;
+    }
+
+    .appoint form input[type="submit"] {
+        width: 25rem;
+    }
+
+    .appoint form .inputbox input {
+        width: 100%;
+    }
+
+    .footer h3 {
+        padding-top: 2rem;
+    }
+}
