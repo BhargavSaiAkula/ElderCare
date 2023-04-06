@@ -12,4 +12,4 @@ Apart from these features, they can use this website for below purposes:
 Salient features:
 1) user-friendly design.
 2)Easy to use navigation.
-3) explicit and on-point content for easy understanding for elderly people.
+3)explicit and on-point content for easy understanding for elderly people.
